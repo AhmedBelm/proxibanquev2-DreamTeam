@@ -23,7 +23,7 @@ public class ModifyClientServlet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		Integer id = parseInt(req.getParameter("id"));
+		Integer id = Integer.parseInt(req.getParameter("id"));
 		String lastname = req.getParameter("lastname");
 		String firstname = req.getParameter("firstname");
 		String email = req.getParameter("email");

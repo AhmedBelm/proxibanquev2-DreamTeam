@@ -97,7 +97,7 @@
 				      		<td class="listeclient">${client.lastname}</td>
 				      		<td class="listeclient">${client.firstname}</td>
 				      		<td class="listeclient">${client.email}</td>
-				      		<td class="listeclient">${client.adresse}</td>
+				      		<td class="listeclient">${client.address}</td>
 				   	 	</tr>
 				 	</c:forEach>
 				 </tbody>
