@@ -1,2 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"/>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+<display-name>Proxibanque SI Version 2.0</display-name>
+
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>fr.formation.proxibanquev2.presentation.IndexServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ModifyClientServlet</servlet-name>
+		<servlet-class>fr.formation.proxibanquev2.presentation.ModifyClientServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ModifyClientServlet</servlet-name>
+		<url-pattern>/modify.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AccountServlet</servlet-name>
+		<servlet-class>fr.formation.proxibanquev2.presentation.AccountServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AccountServlet</servlet-name>
+		<url-pattern>/account.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>TransferServlet</servlet-name>
+		<servlet-class>fr.formation.proxibanquev2.presentation.TransferServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TransferServlet</servlet-name>
+		<url-pattern>/transfer.html</url-pattern>
+	</servlet-mapping>
+
+</web-app>
