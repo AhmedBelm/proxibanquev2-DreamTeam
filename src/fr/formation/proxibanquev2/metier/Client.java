@@ -39,13 +39,6 @@ public class Client {
 		this.address = address;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getFirstname() {
 		return firstname;
@@ -86,5 +79,24 @@ public class Client {
 	public void setAccounts(List<Account> accounts) {
 		this.accounts = accounts;
 	}
+
+	public Client(Integer id, String firstname, String lastname, String email,
+			String address) {
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.address = address;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	
 
 }
