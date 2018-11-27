@@ -80,10 +80,13 @@
 				 	 </div>
 				  <div class="form-group">
 				    <label for="address">Adresse</label>
-				    <input type="text" class="form-control" id="address"  name="address" value="${client.address}">
+				    <input type="text" class="form-control" id="address"  name="email" value="${client.address}">
 				   </div>
 				  </div>
-			  <button type="submit" class="btn btn-primary" style="margin-left:50%">Valider</button> 
+				  <c:url var="indexUrl" value="/"/>
+				  <a href="${indexUrl}"> 
+				    <button type="submit" class="btn btn-primary" style="margin-left:50%">Valider</button> 
+				  </a>
        	  </form>
        	</div>
        	</div>

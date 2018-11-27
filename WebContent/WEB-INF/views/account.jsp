@@ -63,10 +63,10 @@
 			</table>
        	</div>
        	<div style="Margin-left: 39%; margin-top: 50px">
-       			<c:url var="indexUrl" value="/"/>
-       			<a href="${indexUrl}">         
-	       		<button type="submit"class="btn btn-warning" name="action" value="action">Menu Principal</button>       			
-       			</a>
+       		<c:url var="indexUrl" value="/"/>
+				 <a href="${indexUrl}"> 
+				    <button type="submit" class="btn btn-primary">Menu principal</button> 
+				 </a>
        	</div>
        	</div>
     </section>

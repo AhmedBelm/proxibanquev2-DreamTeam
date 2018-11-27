@@ -2,6 +2,8 @@ package fr.formation.proxibanquev2.persistance;
 
 import java.util.List;
 
+
+
 /**
  * presentatio, d'une interface concernant les 4 methodes de manipulation des données élementaires CRUD + readAll
  * @param <T> classe qui représente le type de données manipule par Le Dao
@@ -13,11 +15,11 @@ public interface Dao<T> {
 	
 	/**
 	 * lit les informations d'une entité en base de données.
-	 * @param id l'identifiant unique de l'entité
+	 * @param number l'identifiant unique de l'entité
 	 * @return T l'entité construite à partir des informations récuperées
 	 */
 		
-	public T read(Integer id);
+	public T read(Integer number);
 	
 	/**
 	 * met à jour une entité donnée dans la base de données
@@ -32,6 +34,8 @@ public interface Dao<T> {
 	 */
 	
 	public List<T> readAll();
+
+
 	
 
 	

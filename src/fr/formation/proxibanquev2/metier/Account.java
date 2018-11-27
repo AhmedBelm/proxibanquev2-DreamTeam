@@ -42,6 +42,11 @@ public class Account {
 		this(number, balance);
 		this.savings = savings;
 	}
+	
+	public Account(Integer id, String number, Float balance, boolean savings) {
+        this(number, balance, savings);
+        this.id = id;
+    }
 
 	public Account(Integer id, String number, Float balance, boolean savings) {
         this(number, balance, savings);

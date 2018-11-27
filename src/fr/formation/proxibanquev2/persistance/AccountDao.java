@@ -18,26 +18,6 @@ public class AccountDao implements Dao<Account>{
 		this.mySqlConn = MySqlConnection.getInstance();
 	}
 	
-
-	public Account update(Account entity) {
-		return null;		
-	}
-
-
-	@Override
-	public List<Account> readAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public Account read(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
 	public List<Account> readAllAccount(Integer id_client) {
 	       List<Account> results = new ArrayList<>();
 	        try {
@@ -55,4 +35,49 @@ public class AccountDao implements Dao<Account>{
 	              }
 	                   return results;
 	    }
+
+
+	public Account read(Integer number) {
+		return null;
+	}
+
+	public Account readByNumber(Integer numberA) {	
+		
+		Account result = null;
+		
+		try {
+		Statement st = this.mySqlConn.getConn().createStatement();
+		ResultSet rs = st.executeQuery(String.format(SqlQueries.READ_ACCOUNT_BY_NUMBER, numberA));
+		while(rs.next()) {
+			Float balance = rs.getFloat("balance");
+			result = new Account(numberA.toString(), balance);
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+
+	@Override
+	public List<Account> readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public Account update(Account entity) {
+		try {
+			Statement st = this.mySqlConn.getConn().createStatement();
+			st.executeUpdate(String.format(SqlQueries.UPDATE_ACCOUNT, entity.getBalance(), entity.getNumber()));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return entity;
+	}
+
+
 }

@@ -22,14 +22,17 @@ public class AccountService {
 		return this.dao.readAll();
 	}
 
+<<<<<<< HEAD
 	
 	public List<Account> readAllAccountService(Integer id_client) {
 		return this.dao.readAllAccount(id_client);
 	}
-	
-		public Account readAccount(Integer number) {	
+		
+=======
+	public Account readAccount(Integer number) {	
 		return this.dao.read(number);
-	}	
+	}
+>>>>>>> 176e1d4e2ac0a517136465e01fb5e380430fbe62
 	
 	public List<Account> readAllAccountTransfer(Integer id) {
 		return this.dao.readAllAccount(id);

@@ -17,6 +17,7 @@ public class ClientDao implements Dao<Client> {
 		this.mySqlConn = MySqlConnection.getInstance();
 	}
 
+
 	@Override
 	public List<Client> readAll() {
 		List<Client> results = new ArrayList<>();

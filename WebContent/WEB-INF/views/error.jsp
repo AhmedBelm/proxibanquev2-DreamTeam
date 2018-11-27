@@ -42,7 +42,10 @@
        	</div>
        	<div style="Margin-left: 39%; margin-top: 100px">
        		
-	       		<button type="submit"class="btn btn-warning" name="action" value="action">Menu Principal</button>
+	       		<c:url var="indexUrl" value="/"/>
+				  <a href="${indexUrl}"> 
+				    <button type="submit" class="btn btn-primary" style="margin-left:50%">Valider</button> 
+				  </a>
        	</div>
        	</div>
     </section>
