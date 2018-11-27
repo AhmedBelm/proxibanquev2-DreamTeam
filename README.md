@@ -71,4 +71,8 @@ Pour tester l'application, il vous suffit de suivre les explications suivantes:
 		Cliquer ensuite sur Valider pour effectuer le virement. 
 		Si le client a bien deux comptes au minimum et que le virement ne provoque pas de découvert sur le compte émetteur, le virement est réaliser. 
 		
+<<<<<<< HEAD
 		Vous êtes alors redirigé vers le Menu principal.
+=======
+		Vous êtes alors redirigé vers le Menu principal.
+>>>>>>> 2685a7901b47392d40501188d7a7889895591e12
