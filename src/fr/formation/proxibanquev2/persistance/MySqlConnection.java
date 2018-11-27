@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
+/**
+ * Constructeur de la super classe MySqlConnection permettant la connexion à notre base de données.
+ * @author Adminl
+ *
+ */
 
 public class MySqlConnection {
 	
@@ -20,6 +24,10 @@ public class MySqlConnection {
 			return conn;
 		}
 
+		 /**
+		  * Chargement des pilotes de connexion à notre base de données.
+		  */
+		 
 		public MySqlConnection() {
 			 try {
 				 Class.forName("com.mysql.cj.jdbc.Driver");

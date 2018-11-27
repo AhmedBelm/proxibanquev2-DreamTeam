@@ -23,6 +23,10 @@ public class AccountServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * doGet de AccountServlet récupère tous les comptes de la BDD, grâce à la méthode readAllAccountService.
+	 */
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer id_client = Integer.parseInt(req.getParameter("id"));
@@ -32,6 +36,10 @@ public class AccountServlet extends HttpServlet {
 		req.setAttribute("client", client);
 	    this.getServletContext().getRequestDispatcher("/WEB-INF/views/account.jsp").forward(req, resp);
 	}
+	
+	/**
+	 * doPost de AccountServlet renvoi les données récuperés dans le doGet et fais une redirection vers l'index. 
+	 */
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		

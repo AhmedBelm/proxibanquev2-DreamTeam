@@ -15,10 +15,13 @@ import fr.formation.proxibanquev2.metier.AccountService;
 public class TransferServlet extends HttpServlet {
 
 	/**
-	 * 
+	 * 	
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * doGet de TransferServlet récupère les comptes de la BDD en prenant en paramètre leur id, grâce à la méthode readAccountTransfert(), de AccountService.
+	 */
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,6 +30,10 @@ public class TransferServlet extends HttpServlet {
         req.setAttribute("accounts", accounts);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/transfert.jsp").forward(req, resp);;
 	}
+	
+	/**
+	 * doPost de TransferServlet renvoi les données récuperés dans le doGet et fais une redirection vers l'index. 
+	 */
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

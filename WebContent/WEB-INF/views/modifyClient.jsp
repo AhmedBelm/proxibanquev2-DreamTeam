@@ -80,7 +80,7 @@
 				 	 </div>
 				  <div class="form-group">
 				    <label for="address">Adresse</label>
-				    <input type="text" class="form-control" id="address"  name="email" value="${client.address}">
+				    <input type="text" class="form-control" id="address"  name="address" value="${client.address}">
 				   </div>
 				  </div>
 				  <c:url var="indexUrl" value="/"/>

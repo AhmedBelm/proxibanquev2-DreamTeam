@@ -25,25 +25,52 @@ public class Account {
 	 */
 	private boolean savings;
 	
+	/**
+	 * Identifiant technique correspondant à la clé secondaire dans la table Account.
+	 */
+	
 	private Integer id_client;
 
+	/**
+	 * Constructeur d'initialisation de la classe Account.
+	 */
+	
 	public Account() {
 		this.savings = false;
 		this.balance = 0F;
 	}
 
+	/**
+	 * Constructeur d'initialisation prenant number et balance en paramètres.
+	 * @param number
+	 * @param balance
+	 */
+	
 	public Account(String number, Float balance) {
 		this();
 		this.number = number;
 		this.balance = balance;
 	}
 
+	/**
+	 * Constructeur d'initialisation prenant number, balance, savings en paramètres.
+	 * @param number
+	 * @param balance
+	 * @param savings
+	 */
+	
 	public Account(String number, Float balance, boolean savings) {
 		this(number, balance);
 		this.savings = savings;
 	}
 	
-
+	/**
+	 * Constructeur d'initialisation prenant id, number, balance, savings en paramètres.
+	 * @param id
+	 * @param number
+	 * @param balance
+	 * @param savings
+	 */
 
 	public Account(Integer id, String number, Float balance, boolean savings) {
         this(number, balance, savings);

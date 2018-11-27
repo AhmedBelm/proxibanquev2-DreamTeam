@@ -9,15 +9,33 @@ import java.util.List;
 
 import fr.formation.proxibanquev2.metier.Client;
 
+
+/**
+ * Définition de la classe ClientDao en utilisant l'interface Dao.
+ * @author Adminl
+ *
+ */
+
 public class ClientDao implements Dao<Client> {
 
+	/**
+	 * Définition de l'objet mySqlCnn appartenant à la classe MySqlConnection.
+	 */
+	
 	private final MySqlConnection mySqlConn;
 
+	/**
+	 * Constructeur par défaut.
+	 */
+	
 	public ClientDao() {
 		this.mySqlConn = MySqlConnection.getInstance();
 	}
 
 
+	/**
+	 * Constructeur d'initialisation renvoyant une liste de client.
+	 */
 	@Override
 	public List<Client> readAll() {
 		List<Client> results = new ArrayList<>();
@@ -38,6 +56,10 @@ public class ClientDao implements Dao<Client> {
 		return results;
 	}
 
+	/**
+	 * Constructeur d'initialisation qui prend id en paramètre.
+	 */
+	
 	public Client read(Integer id) {
 		Client client = null;
 		try {
@@ -56,6 +78,10 @@ public class ClientDao implements Dao<Client> {
 		return client;
 	}
 
+	/**
+	 * Constructeur d'initialisation qui prend entity en paramètre.
+	 */
+	
 	public Client update(Client entity) {
 		Statement st;
 		try {

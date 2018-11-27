@@ -18,6 +18,10 @@ public class ModifyClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 
+	/**
+	 * doGet de ModifyClientServlet récupère clients de la BDD, grâce à la méthode readClient(), de ClientService.
+	 */
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer id = Integer.parseInt(req.getParameter("id"));
@@ -25,6 +29,10 @@ public class ModifyClientServlet extends HttpServlet {
 		req.setAttribute("client", client); 
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/modifyClient.jsp").forward(req, resp);
 	}
+	
+	/**
+	 * doPost de AccountServlet renvoi les données récuperés dans le doGet et fais une redirection vers l'index. 
+	 */
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -20,6 +20,15 @@ public class Client {
 	private String email;
 
 	private String address;
+	
+	/**
+	 * Constructeur d'initialisation de la classe client en prenant id, firstname, lastname, email, address commen paramètre.
+	 * @param id
+	 * @param firstname
+	 * @param lastname
+	 * @param email
+	 * @param address
+	 */
 
 	public Client(Integer id, String firstname, String lastname, String email,
 			String address) {
@@ -34,10 +43,22 @@ public class Client {
 	 */
 	private List<Account> accounts;
 
+	/**
+	 * Constructeur par défaut.
+	 */
+	
 	public Client() {
 		this.accounts = new ArrayList<>();
 	}
 
+	/**
+	 * Constructeur d'initilisation en prenant firstname, lastname, email, address comme paramètres.
+	 * @param firstname
+	 * @param lastname
+	 * @param email
+	 * @param address
+	 */
+	
 	public Client(String firstname, String lastname, String email,
 			String address) {
 		this();
