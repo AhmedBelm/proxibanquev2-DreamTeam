@@ -24,6 +24,8 @@ public class Account {
 	 * Si vrai, c'est un compte épargne, sinon c'est un compte courant.
 	 */
 	private boolean savings;
+	
+	private Integer id_client;
 
 	public Account() {
 		this.savings = false;
@@ -40,6 +42,11 @@ public class Account {
 		this(number, balance);
 		this.savings = savings;
 	}
+
+	public Account(Integer id, String number, Float balance, boolean savings) {
+        this(number, balance, savings);
+        this.id = id;
+    }
 
 	public Integer getId() {
 		return id;
@@ -71,6 +78,14 @@ public class Account {
 
 	public void setSavings(boolean savings) {
 		this.savings = savings;
+	}
+
+	public Integer getId_client() {
+		return id_client;
+	}
+
+	public void setId_client(Integer id_client) {
+		this.id_client = id_client;
 	}
 	
 }

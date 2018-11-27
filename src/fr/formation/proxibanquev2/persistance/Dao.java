@@ -33,6 +33,7 @@ public interface Dao<T> {
 	
 	public List<T> readAll();
 	
+
 	
 
 }

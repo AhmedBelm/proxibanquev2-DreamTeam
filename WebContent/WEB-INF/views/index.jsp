@@ -84,8 +84,8 @@
 				<thead>
 				    <tr>
 				      <th class="listeclient">N° Client</th>
-				      <th class="listeclient">Lastname</th>
-				      <th class="listeclient">Firstname</th>
+				      <th class="listeclient">Nom</th>
+				      <th class="listeclient">Prénom</th>
 				      <th class="listeclient">Email</th>
 				      <th class="listeclient">Adresse</th>
 				    </tr>
@@ -97,7 +97,7 @@
 				      		<td class="listeclient">${client.lastname}</td>
 				      		<td class="listeclient">${client.firstname}</td>
 				      		<td class="listeclient">${client.email}</td>
-				      		<td class="listeclient">${client.adresse}</td>
+				      		<td class="listeclient">${client.address}</td>
 				   	 	</tr>
 				 	</c:forEach>
 				 </tbody>
@@ -106,11 +106,11 @@
         <div>
 	        <form method="post" action="">
 				<div>
-					<label for="client">N° Client</label>
-					<select id="client" name="client">
+					<label for="id">N° Client</label>
+					<select id="id" name="id">
 						<option label="---" value=""/> 
 						<c:forEach var="client" items="${clients}">
-							<option label="${client.lastname} ${client.firstname}." value="${client.id}"/>
+							<option label="${client.lastname} ${client.firstname}" value="${client.id}"/>
 						</c:forEach>
 					</select>
 				</div>

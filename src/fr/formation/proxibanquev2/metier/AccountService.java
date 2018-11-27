@@ -26,6 +26,11 @@ public static final AccountService INSTANCE = new AccountService();
 	public List<Account> getAll() {
 		return this.dao.readAll();
 	}
+
+	
+	public List<Account> readAllAccountService(Integer id_client) {
+		return this.dao.readAllAccount(id_client);
+	}
 		
 	
 }
