@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" isErrorPage="true"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -37,14 +37,14 @@
             <h2 class="section-heading text-uppercase" style="color: red">Erreur</h2>
           </div>
         </div>
-        <div style="margin-top: 30px; background-color: red; color: white;  border-width:2px; border-style:double;" >
+        <div style="margin-top: 30px; background-color: red; color: white;  border-width:2px; border-style:double; border-color:black; width: 30%; margin-left:35%" >
         	<p>Une erreur s'est produite dans le programme, merci de contacter le responsable technique de l'application.</p>
        	</div>
-       	<div style="Margin-left: 39%; margin-top: 100px">
+       	<div style="Margin-left: 43%; margin-top: 100px">
        		
 	       		<c:url var="indexUrl" value="/"/>
 				  <a href="${indexUrl}"> 
-				    <button type="submit" class="btn btn-primary" style="margin-left:50%">Valider</button> 
+				    <button type="submit" class="btn btn-primary">Menu principal</button> 
 				  </a>
        	</div>
        	</div>

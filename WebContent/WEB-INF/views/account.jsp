@@ -39,7 +39,7 @@
         </div>
         <div style="margin-top: 30px">
         	<div style="margin-bottom: 30px">
-        	<h3> Informations du client : ${client.lastname} ${client.firstname}</h3>        	
+        	<h3> ${client.lastname} ${client.firstname}</h3>        	
         	</div>
         	<table class="table table-hover">
 				<thead>

@@ -26,10 +26,6 @@ public class ClientService {
 		this.dao.update(new Client(id, lastname, firstname, email, address));
 	}
 
-	public Client readClient(Integer id) {	
-		return this.dao.read(id);
-	}
-	
 	public Client readClient(Integer id) {
 		return this.dao.read(id);
 	}
