@@ -18,7 +18,7 @@ public class ClientDao implements Dao<Client> {
 		this.mySqlConn = MySqlConnection.getInstance();
 	}
 	
-	@Override
+
 	public Client read(Integer id) {
 		return null;
 	}

@@ -16,32 +16,62 @@ public class AccountDao implements Dao<Account>{
 		this.mySqlConn = MySqlConnection.getInstance();
 	}
 	
-	@Override
-	public List<Account> readAll() {
-		List<Account> results = new ArrayList<>();
-   try {
-	Statement st = this.mySqlConn.getConn().createStatement();
-	ResultSet rs = st.executeQuery(SqlQueries.READ_ALL_CLIENT);
-	while(rs.next()) {
-		String number = rs.getString("number");
-		Float balance = rs.getFloat("balance");
-		Boolean savings = rs.getBoolean("savings");
-		results.add(new Account(number, balance, savings));
-	}
-   } catch (SQLException e) {
-	e.printStackTrace();
-   }
-		return results;
+	public List<Account> readAllAccount(Integer id_client) {
+        List<Account> results = new ArrayList<>();
+         try {
+                Statement st = this.mySqlConn.getConn().createStatement();
+                ResultSet rs= st.executeQuery(String.format(SqlQueries.READ_ACCOUNT, id_client));
+                while(rs.next()) {
+                    int id = rs.getInt("id");
+                    String number = rs.getString("number");
+                    Float balance = rs.getFloat("balance");
+                    String savings = rs.getString("savings");
+                    results.add(new Account(id, number, balance, savings.equals("Y")));
+                }
+               } catch (SQLException e) {
+                e.printStackTrace();
+               }
+                    return results;
 	}
 	
 
-	public Account update(Account entity) {
-		return null;		
+
+	public Account read(Integer number) {
+		return null;
+	}
+
+	public Account readByNumber(Integer numberA) {	
+		
+		Account result = null;
+		
+		try {
+		Statement st = this.mySqlConn.getConn().createStatement();
+		ResultSet rs = st.executeQuery(String.format(SqlQueries.READ_ACCOUNT_BY_NUMBER, numberA));
+		while(rs.next()) {
+			Float balance = rs.getFloat("balance");
+			result = new Account(numberA.toString(), balance);
+		}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	@Override
-	public Account read(Integer id) {
+	public List<Account> readAll() {
+		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Account update(Account entity) {
+		try {
+			Statement st = this.mySqlConn.getConn().createStatement();
+			st.executeUpdate(String.format(SqlQueries.UPDATE_ACCOUNT, entity.getBalance(), entity.getNumber()));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return entity;
 	}
 
 }
